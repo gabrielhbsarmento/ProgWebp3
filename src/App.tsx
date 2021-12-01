@@ -5,6 +5,17 @@ async function getRep(){
     const resp = await API.get('/posts');
     return resp.data
 }
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'Obter Postagen',
+  body: JSON.stringify({
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 function App() { 
     const [posts, setPosts] = useState({});
     console.log('Obter Postagen')
@@ -23,6 +34,7 @@ function App() {
             Obter Postagen
         </button>
         </>
+
     );
 
 }
