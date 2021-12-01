@@ -11,6 +11,10 @@ function App() {
     console.log(posts)
     return (
         <>
+        <select value="B">
+    <option value="A">Post1</option>
+    <option value="B">Post2</option>
+    </select>
         <div>Etapa 6 Postagens </div>
         <button onClick={() => setPosts({posts: getRep()})}>
             Obter Postagen
