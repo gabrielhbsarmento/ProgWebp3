@@ -1,21 +1,22 @@
-import React, {useState} from 'react';
-import API from './api'; 
+import React, { useState } from 'react';
+import API from './api'
 
-function App() {
-
-    /**function getById(){
-        const id = document.querySelector('#user').value
-        axios.get(`http://jsonplaceholder.typicode.com/todos/${id}`)
-        .then(res => showResponse(res))
-    }/** */
-
-    API.get('/posts')
-    .then(etapa5 => console.log(etapa5))
-    /**function post(){
-        const title= document.querySelector('#post').value
-        axios.post("http://jsonplaceholder.typicode.com/posts",{title}).then(res => showResponse(res))
-    }/** */
-    return <div>Comece aqui!</div>;
+async function getRep(){
+    const resp = await API.get('/posts');
+    return resp.data
 }
+function App() { 
+    const [posts, setPosts] = useState({});
+    console.log('Obter Postagen')
+    console.log(posts)
+    return (
+        <>
+        <div>Etapa 6 Postagens </div>
+        <button onClick={() => setPosts({posts: getRep()})}>
+            Obter Postagen
+        </button>
+        </>
+    );
 
+}
 export default App;
