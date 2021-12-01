@@ -14,6 +14,9 @@ function App() {
         <select value="B">
     <option value="A">Post1</option>
     <option value="B">Post2</option>
+    <option value="C">Post3</option>
+    <option value="D">Post4</option>
+    <option value="E">Post5</option>
     </select>
         <div>Etapa 6 Postagens </div>
         <button onClick={() => setPosts({posts: getRep()})}>
