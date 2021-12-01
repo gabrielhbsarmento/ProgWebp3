@@ -10,7 +10,7 @@ function App() {
     }/** */
 
     API.get('/posts')
-    .then(etapa6 => console.log(etapa6))
+    .then(etapa5 => console.log(etapa5))
     /**function post(){
         const title= document.querySelector('#post').value
         axios.post("http://jsonplaceholder.typicode.com/posts",{title}).then(res => showResponse(res))
